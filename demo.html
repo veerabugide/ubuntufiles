@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            document.getElementById('s1').innerHTML='<h1>Hello</h1>';
+        }
+        var c;
+        function calculate(c){
+            var a=parseInt(document.f1.n1.value);
+            var b=parseInt(document.f1.n2.value);
+            if(c=="add")
+            {
+                document.getElementById("s2").innerText=a+b;
+            }
+            else if(c=="sub"){
+                document.getElementById("s2").innerText=a-b;
+            }
+            else if(c=="mul"){
+                document.getElementById("s2").innerText=a*b;
+            }
+            else if(c=="div"){
+                document.getElementById("s2").innerText=a/b;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>
+        inner html and inner text</h1>
+    <hr>
+    <span id="s1">Hello everyone</span>
+    <button onclick="abc()">change</button>
+    <hr>
+    <form name="f1">
+    enter num1:<input type="number" name="n1" #v1><br>
+    enter num2:<input type="number" name="n2" #v2><br>
+    <input type="button" value="add" onclick="calculate('add')" >
+    <input type="button" value="sub" onclick="calculate('sub')" >
+    <input type="button" value="mul" onclick="calculate('mul')" >
+    <input type="button" value="div" onclick="calculate('div')" >
+    </form>
+    <h3>result :<span id="s2"></span>
+    </h3>
+</body>
+</html>
